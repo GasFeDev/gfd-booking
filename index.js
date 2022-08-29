@@ -1,7 +1,6 @@
 /* express: Marco de desarrollo minimalista para Node.js que permite estructurar una aplicación de una manera ágil, nos proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies, etc. */
 import express from "express";
 import dotenv from "dotenv";
-require("dotenv").config({ path: "./config.env" });
 const connectDB = require("./config/db");
 const path = require("path");
 import authRoute from "./routes/auth.js";
