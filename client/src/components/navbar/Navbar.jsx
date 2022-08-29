@@ -13,7 +13,7 @@ const Navbar = () => {
           <span className="logo">FedeATravel</span>
         </Link>
         {user ? (
-          <div className="options">
+          <div className="optionss">
             <span onClick={() => dispatch({ type: "LOGOUT" })}>
               Cerrar Sesión
             </span>
