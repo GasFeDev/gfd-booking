@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
-import connectDB from "./config/db.js";
+import mongoose from "mongoose";
 import path from "path";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
@@ -13,7 +13,18 @@ import cors from "cors";
 
 const app = express();
 
-connectDB();
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO);
+    console.log("Connected to mongoDB.");
+  } catch (error) {
+    throw error;
+  }
+};
+
+mongoose.connection.on("disconnected", () => {
+  console.log("mongoDB disconnected!");
+});
 
 //middlewares
 app.use(
@@ -46,7 +57,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  connect();
+  console.log(`Server running on port ${PORT}`);
+});
 
 /* const express = require("express");
 const app = express();
