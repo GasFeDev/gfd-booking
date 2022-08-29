@@ -1,0 +1,89 @@
+.reserve {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 254, 254, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: azure;
+}
+
+.rContainer {
+  background-color: rgba(21, 20, 20, 0.914);
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.rClose {
+  position: absolute;
+  font-size: 30px;
+  color: azure;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 30px;
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rTitle {
+  font-weight: 500;
+  color: azure;
+  font-weight: bold;
+}
+
+.rDesc {
+  font-weight: 300;
+  color: rgb(177, 190, 190);
+}
+
+.rMax {
+  font-size: 12px;
+  color: rgb(177, 190, 190);
+}
+
+.rPrice {
+  font-weight: 500;
+  color: azure;
+}
+
+.rSelectRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: gray;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+}
+
+.rButton {
+  border: none;
+  padding: 5px 5px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
