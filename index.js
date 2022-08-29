@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 import path from "path";
+const __dirname = path.resolve();
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
