@@ -1,15 +1,17 @@
 /* express: Marco de desarrollo minimalista para Node.js que permite estructurar una aplicación de una manera ágil, nos proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies, etc. */
-const express = require("express");
+import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
+import connectDB from "./config/db";
+import path from "path";
+import authRoute from "./routes/auth.js";
+import usersRoute from "./routes/users.js";
+import hotelsRoute from "./routes/hotels.js";
+import roomsRoute from "./routes/rooms.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+
 const app = express();
-require("dotenv").config({ path: "./config.env" });
-const connectDB = require("./config/db");
-const path = require("path");
-const authRoute = require("./routes/auth.js");
-const usersRoute = require("./routes/users.js");
-const hotelsRoute = require("./routes/hotels.js");
-const roomsRoute = require("./routes/rooms.js");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
 
 connectDB();
 
@@ -45,3 +47,15 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+/* const express = require("express");
+const app = express();
+require("dotenv").config({ path: "./config.env" });
+const connectDB = require("./config/db");
+const path = require("path");
+const authRoute = require("./routes/auth.js");
+const usersRoute = require("./routes/users.js");
+const hotelsRoute = require("./routes/hotels.js");
+const roomsRoute = require("./routes/rooms.js");
+const cookieParser = require("cookie-parser");
+const cors = require("cors"); */
