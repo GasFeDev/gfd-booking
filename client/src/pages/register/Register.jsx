@@ -1,7 +1,7 @@
-import axios from "axios";
 import { useRef } from "react";
 import "./register.css";
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../../config";
 
 export default function Register() {
   const username = useRef();
@@ -27,7 +27,7 @@ export default function Register() {
         phone: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
+        await axiosInstance.post("/auth/register", user);
         navigate("/login");
 
         /* Podemos empujar a los usuarios de una página a otra usando history.push. Cuando usamos el método push, solo necesitamos proporcionar la ruta que queremos llevar a nuestros usuarios a usar este método. */
