@@ -108,3 +108,11 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
+/* ########## MEDIA QUERIES (PHONE) ########## */
+@media screen and (max-width: 800px) {
+  .searchItem {
+    display: contents;
+    justify-content: space-between;
+  }
+}

@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  width: 1024px;
+
   font-size: 11px;
 }
 
@@ -20,4 +20,13 @@
   margin-bottom: 15px;
   color: #0f02629c;
   cursor: pointer;
+}
+/* ########## MEDIA QUERIES (PHONE) ########## */
+@media screen and (max-width: 900px) {
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
 }

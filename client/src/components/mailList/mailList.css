@@ -28,3 +28,10 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* ########## MEDIA QUERIES (PHONE) ########## */
+@media screen and (max-width: 900px) {
+  .mail {
+    width: 80%;
+  }
+}

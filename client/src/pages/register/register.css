@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
   background-color: #c8ccd1db;
-  display: flex;
+  position: relative;
+  display: contents;
   align-items: center;
   justify-content: center;
 }
@@ -10,7 +11,8 @@
 .loginWrapper {
   width: 55%;
   height: 55%;
-  display: flex;
+  position: relative;
+  display: contents;
 }
 
 .loginLeft,
@@ -86,4 +88,27 @@
   font-size: 23px;
   font-weight: 500;
   cursor: pointer;
+}
+
+@media screen and (max-width: 590px) {
+  .loginLogo {
+    font-size: 25px;
+  }
+  .loginDesc {
+    font-size: 15px;
+    display: inline;
+  }
+  .loginLeft,
+  .loginRight {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .loginLogo {
+    display: none;
+  }
+  .loginDesc {
+    display: none;
+  }
 }

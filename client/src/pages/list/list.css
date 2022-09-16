@@ -87,3 +87,9 @@
 .listResult {
   flex: 3;
 }
+
+@media screen and (max-width: 460px) {
+  .listSearch {
+    display: none;
+  }
+}
